@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }} — {{ ssid }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="router">
+  <div class="card">
+    <div class="brand">⬢ NetGate</div>
+    <h1>{{ title }}</h1>
+    <p class="muted">Sign in to manage your <strong>{{ ssid }}</strong> router.</p>
+    <form method="POST" action="/login">
+      <label>Username
+        <input type="text" name="username" autocomplete="username" required />
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="current-password" required />
+      </label>
+      <button type="submit">Sign In</button>
+    </form>
+    <p class="fineprint">Unauthorized access is prohibited.</p>
+  </div>
+</body>
+</html>

