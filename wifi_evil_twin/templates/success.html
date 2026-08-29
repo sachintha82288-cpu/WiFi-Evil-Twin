@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connected — {{ ssid }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="success">
+  <div class="card center">
+    <div class="check">✓</div>
+    <h1>You are connected</h1>
+    <p class="muted">Your device is online on <strong>{{ ssid }}</strong>.</p>
+  </div>
+</body>
+</html>
